@@ -13,7 +13,8 @@
                     $start = $row['start_time'];
                     $finish = $row['finish_time'];
                     $key = $row['login_token'];
-                    if($start < $finish){
+                    $time = time()
+                    if($time < $finish){
                         $info = array();
                         $sql = "SELECT * FROM user WHERE 1";
                         $resulte = $conn->query($sql);
